@@ -23,7 +23,7 @@ func main() {
 	if err == nil {
 		if len(dirs) > 0 {
 			for i := 0; i < len(dirs); i++ {
-				fmt.Print("\n   [->]" + dirs[i].Name)
+				fmt.Print("\n" + dirs[i].Name)
 			}
 		}
 	}
@@ -35,7 +35,10 @@ func main() {
 	// defer r.Close()
 
 	// buf, err := ioutil.ReadAll(r)
-	// println(string(buf))
+	// err = ioutil.WriteFile("1.txt", buf, 0644)
+	// if err != nil {
+	// 	panic(err)
+	// }
 	// Do something with the FTP conn
 
 	if err := c.Quit(); err != nil {
